@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using Xamarin.Forms;
 
-namespace Denuncias
+namespace Denuncias.View
 {
-    public partial class MainPage : ContentPage
+    public partial class ListaDenuncias : ContentPage
     {
-        public MainPage()
+        public ListaDenuncias()
         {
             InitializeComponent();
         }
