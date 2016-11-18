@@ -3,20 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using Xamarin.Forms;
 
-namespace Denuncias
+namespace Denuncias.View
 {
-    public partial class MainPage : ContentPage
+    public partial class TelaPrincipal : ContentPage
     {
-        public MainPage()
+        public TelaPrincipal()
         {
             InitializeComponent();
         }
 
         async void BtnIniciarClick(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new View.ListaDenuncias());
+            //await Navigation.PushAsync (new ListaDenuncias()); por algum motivo deu problema
+
+            await Navigation.PushModalAsync(new ListaDenuncias());
         }
     }
 }

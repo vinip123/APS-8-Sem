@@ -2,5 +2,31 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Denuncias.View.ListaDenuncias">
-  <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+  <ContentPage.Content>   
+    <ListView x:Name="listView" ItemSelected="OnItemSelected">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <ViewCell.View>
+              <StackLayout Padding="20,0,20,0"
+                           Orientation="Horizontal"
+                           HorizontalOptions="FillAndExpand">
+
+                <Label Text="{Binding Nome}"
+                       VerticalTextAlignment="Center"
+                       HorizontalOptions="StartAndExpand" />
+                <Label Text="{Binding Texto}"
+                       VerticalTextAlignment="Center"
+                       HorizontalOptions="StartAndExpand" />
+                <Label Text="{Binding Endereco}"
+                       VerticalTextAlignment="Center"
+                       HorizontalOptions="StartAndExpand" />
+
+              </StackLayout>
+            </ViewCell.View>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </ContentPage.Content>
 </ContentPage>

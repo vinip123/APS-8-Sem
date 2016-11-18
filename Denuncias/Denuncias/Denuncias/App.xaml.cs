@@ -13,7 +13,7 @@ namespace Denuncias
         {
             InitializeComponent();
 
-            MainPage = new Denuncias.MainPage();
+            MainPage = new Denuncias.View.TelaPrincipal();
         }
 
         protected override void OnStart()
