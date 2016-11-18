@@ -14,5 +14,20 @@ namespace Denuncias.View
         {
             InitializeComponent();
         }
+
+        void BtnSalvarClick(object sender, EventArgs e)
+        {
+            this.Navigation.PopModalAsync();
+        }
+
+        void BtnExcluirCLick(object sender, EventArgs e)
+        {
+            this.Navigation.PopModalAsync();
+        }
+
+        void BtnCancelarCLick(object sender, EventArgs e)
+        {
+            this.Navigation.PopModalAsync();
+        }
     }
 }

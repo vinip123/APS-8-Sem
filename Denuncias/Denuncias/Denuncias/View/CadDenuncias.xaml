@@ -7,11 +7,11 @@
       <Label Text="Nome" />
       <Entry x:Name="txtNome"
              Placeholder="Digite seu nome"
-             Text="{Binding Path=Nome}" />
+             Text="{Binding Nome}" />
       <Label Text="Denúncia" />
-      <Entry x:Name="txtDenuncia" Text="{Binding Path=Texto}" />
+      <Entry x:Name="txtDenuncia" Text="{Binding Texto}" />
       <Label Text="Endereço" />
-      <Entry x:Name="txtEndereco" Text="{Binding Path=Endereco}" />
+      <Entry x:Name="txtEndereco" Text="{Binding Endereco}" />
       <Button Clicked="BtnSalvarClick" Text="Salvar" />
       <Button Clicked="BtnExcluirCLick" Text="Excluir" />
       <Button Clicked="BtnCancelarCLick" Text="Cancelar" />

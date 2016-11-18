@@ -10,47 +10,47 @@ namespace Denuncias.View
 {
     public partial class ListaDenuncias : ContentPage
     {
-        List<Model.Denuncia> contacts;
+        List<Model.Denuncia> denuncia;
 
         public ListaDenuncias()
         {
             InitializeComponent();
 
-            SetupData();
-            listView.ItemsSource = contacts;
+            CarregaDados();
+            listView.ItemsSource = denuncia;
         }
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             if (listView.SelectedItem != null)
             {
-                var detailPage = new CadDenuncias();
-                detailPage.BindingContext = e.SelectedItem as Model.Denuncia;
+                var cadadtro = new CadDenuncias();
+                cadadtro.BindingContext = e.SelectedItem as Model.Denuncia;
                 listView.SelectedItem = null;
-                await Navigation.PushModalAsync(detailPage);
+                await Navigation.PushModalAsync(cadadtro);
             }
         }
 
-        void SetupData()
+        void CarregaDados()
         {
-            contacts = new List<Model.Denuncia>();
-            contacts.Add(new Model.Denuncia
+            denuncia = new List<Model.Denuncia>();
+            denuncia.Add(new Model.Denuncia
             {
                 Id = 1,
                 Nome = "Vinicius R",
                 Texto = "Absurdo!",
                 Endereco = "Vila Belmiro"
             });
-            contacts.Add(new Model.Denuncia
+            denuncia.Add(new Model.Denuncia
             {
-                Id = 1,
+                Id = 2,
                 Nome = "Matheus M",
                 Texto = "Cade as autoridades?!",
                 Endereco = "Rangel Pestana"
             });
-            contacts.Add(new Model.Denuncia
+            denuncia.Add(new Model.Denuncia
             {
-                Id = 1,
+                Id = 3,
                 Nome = "Sergio S",
                 Texto = "Queimada na oca!",
                 Endereco = "Bertioga"
