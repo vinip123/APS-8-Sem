@@ -1,20 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Denuncias.View.CadDenuncias">
-  <ContentPage.Content>
-    <StackLayout VerticalOptions="StartAndExpand">
-      <Label Text="Nome" />
-      <Entry x:Name="txtNome"
-             Placeholder="Digite seu nome"
-             Text="{Binding Nome}" />
-      <Label Text="Denúncia" />
-      <Entry x:Name="txtDenuncia" Text="{Binding Texto}" />
-      <Label Text="Endereço" />
-      <Entry x:Name="txtEndereco" Text="{Binding Endereco}" />
-      <Button Clicked="BtnSalvarClick" Text="Salvar" />
-      <Button Clicked="BtnExcluirCLick" Text="Excluir" />
-      <Button Clicked="BtnCancelarCLick" Text="Cancelar" />
-    </StackLayout>
-  </ContentPage.Content>
+<ContentPage x:Class="Denuncias.View.CadDenuncias"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="StartAndExpand">
+            <Label Text="Nome" />
+            <Entry x:Name="txtNome"
+                   Placeholder="Digite seu nome"
+                   Text="{Binding Nome}" />
+            <Label Text="Denúncia" />
+            <Entry x:Name="txtDenuncia" Text="{Binding Texto}" />
+            <Label Text="Endereço" />
+            <Entry x:Name="txtEndereco" Text="{Binding Endereco}" />
+            <Entry x:Name="txtCidade" Text="{Binding Cidade}" />
+            <Entry x:Name="txtEstado" Text="{Binding Estado}" />
+            <Button Clicked="BtnSalvarClick" Text="Salvar" />
+            <Button Clicked="BtnExcluirCLick" Text="Excluir" />
+            <Button Clicked="BtnCancelarCLick" Text="Cancelar" />
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

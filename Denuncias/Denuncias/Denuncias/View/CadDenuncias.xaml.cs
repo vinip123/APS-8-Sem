@@ -18,6 +18,7 @@ namespace Denuncias.View
         void BtnSalvarClick(object sender, EventArgs e)
         {
             this.Navigation.PopModalAsync();
+            string lat = API.ApiMaps.GetLat(txtEndereco.Text, txtCidade.Text, txtEstado.Text);
         }
 
         void BtnExcluirCLick(object sender, EventArgs e)
