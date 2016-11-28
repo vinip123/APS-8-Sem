@@ -15,5 +15,9 @@ namespace Denuncias.Model
         public string Texto { get; set; }
 
         public string Endereco { get; set; }
+
+        public string Cidade{ get; set; }
+
+        public string Estado{ get; set; }
     }
 }

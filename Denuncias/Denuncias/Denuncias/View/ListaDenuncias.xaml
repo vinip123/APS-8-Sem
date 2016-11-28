@@ -1,29 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Denuncias.View.ListaDenuncias">
- 
-  <ContentPage.Content>
-    <ListView x:Name="listView" ItemSelected="OnItemSelected">
-      <ListView.ItemTemplate>
-        <DataTemplate>
-          <ViewCell>
-            <ViewCell.View>
-              <StackLayout Padding="20,0,20,0"
-                           Orientation="Vertical">
+<ContentPage x:Class="Denuncias.View.ListaDenuncias"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
-                <Label Text="{Binding Nome}"
-                       VerticalTextAlignment="Center"
-                       HorizontalOptions="StartAndExpand" />
-                <Label Text="{Binding Texto}"
-                       VerticalTextAlignment="Center"
-                       HorizontalOptions="StartAndExpand" />
+    <ContentPage.Content>
+        <ListView x:Name="listView" ItemSelected="OnItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Orientation="Vertical" Padding="20,0,20,0">
 
-              </StackLayout>
-            </ViewCell.View>
-          </ViewCell>
-        </DataTemplate>
-      </ListView.ItemTemplate>
-    </ListView>
-  </ContentPage.Content>
+                                <Label HorizontalOptions="StartAndExpand"
+                                       Text="{Binding Nome}"
+                                       VerticalTextAlignment="Center" />
+                                <Label HorizontalOptions="StartAndExpand"
+                                       Text="{Binding Texto}"
+                                       VerticalTextAlignment="Center" />
+
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
 </ContentPage>
