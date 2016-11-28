@@ -15,7 +15,7 @@
             <Entry x:Name="txtCidade" Text="{Binding Cidade}" />
             <Entry x:Name="txtEstado" Text="{Binding Estado}" />
             <Button Clicked="BtnSalvarClick" Text="Salvar" />
-            <Button Clicked="BtnExcluirCLick" Text="Excluir" />
+            <Button Clicked="BtnMapaCLick" Text="Ver Mapa" />
             <Button Clicked="BtnCancelarCLick" Text="Cancelar" />
         </StackLayout>
     </ContentPage.Content>

@@ -18,12 +18,24 @@ namespace Denuncias.View
         void BtnSalvarClick(object sender, EventArgs e)
         {
             this.Navigation.PopModalAsync();
-            string lat = API.ApiMaps.GetLat(txtEndereco.Text, txtCidade.Text, txtEstado.Text);
         }
 
-        void BtnExcluirCLick(object sender, EventArgs e)
+        async void BtnMapaCLick(object sender, EventArgs e)
         {
-            this.Navigation.PopModalAsync();
+            if (txtEndereco.Text != "" && txtCidade.Text != "" && txtEstado.Text != "")
+            {
+                var lat = API.ApiMaps.Getlat(txtEndereco.Text, txtCidade.Text, txtEstado.Text);
+
+                foreach (var singleResult in lat.results)
+                {
+                    var location = singleResult.geometry.location;
+                    var latitude = location.lat;
+                    var longitude = location.lng;
+
+                    var mapa = new ViewMapa(latitude, longitude);
+                    await Navigation.PushModalAsync(mapa);
+                }
+            }
         }
 
         void BtnCancelarCLick(object sender, EventArgs e)
