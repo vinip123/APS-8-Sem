@@ -20,7 +20,7 @@ namespace Denuncias.UWP
         public MainPage()
         {
             this.InitializeComponent();
-
+            Xamarin.FormsMaps.Init("sua_chave_aqui");
             LoadApplication(new Denuncias.App());
         }
     }
